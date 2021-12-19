@@ -83,7 +83,7 @@
                     <serverId>nexus-releases</serverId>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>false</autoReleaseAfterClose>
-                    <skipStagingRepositoryClose>true</skipStagingRepositoryClose>
+<!--                    <skipStagingRepositoryClose>true</skipStagingRepositoryClose>-->
                 </configuration>
             </plugin>
         </plugins>
