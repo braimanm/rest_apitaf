@@ -5,8 +5,31 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.googlecode.page-component</groupId>
-    <artifactId>taf_api_rest</artifactId>
+    <artifactId>rest_api_taf</artifactId>
     <version>1.0</version>
+    <packaging>jar</packaging>
+    <name>${project.artifactId}</name>
+    <description>This project simplify REST API testing </description>
+    <url>https://github.com/braimanm/rest_apitaf</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Michael Braiman</name>
+            <email>braimanm@gmail.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/braimanm/rest_apitaf</url>
+    </scm>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -60,7 +83,7 @@
                     <serverId>nexus-releases</serverId>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>false</autoReleaseAfterClose>
-                    <!--                    <skipStagingRepositoryClose>true</skipStagingRepositoryClose>-->
+                    <skipStagingRepositoryClose>true</skipStagingRepositoryClose>
                 </configuration>
             </plugin>
         </plugins>
@@ -92,5 +115,4 @@
             </build>
         </profile>
     </profiles>
-
 </project>
