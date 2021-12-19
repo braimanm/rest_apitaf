@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <setup>
-    <environment environmentName="dev" url="https://servise url">
+    <environment environmentName="dev" url="">
+        <prop name="api_url" value="https://reqres.in/api"/>
         <user role="role" fullName="Full Name" userName="user" password="password"/>
     </environment>
 </setup>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rest-test>
+    <request>
+        <endPoint>/users</endPoint>
+        <header name ="Content-Type" value="application/json"/>
+        <header name="Accept" value="*/*"/>
+        <payloadBody>
+            
+        </payloadBody>
+    </request>
+    <response>
+        <status code="201" text="Created"/>
+        <fieldsToValidate>
+            <field name="name" path="name">${name}</field>
+            <field name="job" path="job">${job}</field>
+            <field name="id" path="id" assertion="LONG_GRATER_THAN">0</field>
+        </fieldsToValidate>
+    </response>
+</rest-test>

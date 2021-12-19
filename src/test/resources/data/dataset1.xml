@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rest-test>
+    <request>
+        <endPoint>/products/3</endPoint>
+        <header name ="Content-Type" value="application/json"/>
+        <header name="Accept" value="*/*"/>
+    </request>
+    <response>
+        <status code="200" text="OK"/>
+        <fieldsToValidate>
+            <field name="id" path="data.id">3</field>
+            <field name="name" path="data.name">true red</field>
+            <field name="year" path="data.year">2002</field>
+            <field name="color" path="data.color">#BF1932</field>
+        </fieldsToValidate>
+    </response>
+</rest-test>

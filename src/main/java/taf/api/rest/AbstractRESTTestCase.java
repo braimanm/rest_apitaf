@@ -7,18 +7,22 @@ import ui.auto.core.support.TestContext;
 
 @SuppressWarnings("unused")
 @XStreamAlias("rest-test-case")
-public class RESTTestCase extends APIObject {
-    private RequestData request;
-    private ResponseData response;
+public abstract class AbstractRESTTestCase extends APIObject {
+    protected RequestData request;
+    protected ResponseData response;
 
-    private String getBaseUrl() {
-        String apiUrl = TestContext.getTestProperties().getTestEnvironment().getCustom("api_url");
+    protected Config getConfig(){
+       return getDefaultConfig();
+    }
+
+    protected String getBaseUrlFromEnvironment(String environmentProperty) {
+        String apiUrl = TestContext.getTestProperties().getTestEnvironment().getCustom(environmentProperty);
         return (request.getEndPoint(true).startsWith("http")) ? null : apiUrl;
     }
 
-    private Config getConfig() {
+    protected Config getDefaultConfig() {
         Config config = new Config();
-        config.verifySsl(false).defaultBaseUrl(getBaseUrl());
+        config.verifySsl(false).defaultBaseUrl(null);
         return config;
     }
 

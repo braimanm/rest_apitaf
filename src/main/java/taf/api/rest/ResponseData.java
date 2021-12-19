@@ -85,11 +85,7 @@ public class ResponseData {
                     active = TestContext.getGlobalAliases().getAsString(active.trim());
                 }
                 if (active == null || active.equalsIgnoreCase("true")) {
-//                    try {
-                        validate(fieldToValidate.name, fieldToValidate.path, fieldToValidate.getData(true), fieldToValidate.assertion);
-//                    } catch (Exception ignore) {
-//                        ignore.printStackTrace();
-//                    }
+                    validate(fieldToValidate.name, fieldToValidate.path, fieldToValidate.getData(true), fieldToValidate.assertion);
                 }
         }
         soft.assertAll();
