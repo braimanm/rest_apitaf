@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<setup>
+    <environment environmentName="dev" url="https://servise url">
+        <user role="role" fullName="Full Name" userName="user" password="password"/>
+    </environment>
+</setup>
