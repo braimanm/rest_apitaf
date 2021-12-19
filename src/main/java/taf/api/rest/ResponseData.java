@@ -64,7 +64,7 @@ public class ResponseData {
                 .isEqualTo(expected);
     }
 
-    @Step("Validate field \"{0}\" with expected value \"{2}\"")
+    @Step("Validate field \"{0}\" with expected value {3} \"{2}\"")
     private void validate(String name, String path, String expected, String assertionType) {
         String actual = getValueAsString(path);
         String as = "Field Name: " + name + " , Field Path: " + path;
@@ -85,7 +85,8 @@ public class ResponseData {
                     active = TestContext.getGlobalAliases().getAsString(active.trim());
                 }
                 if (active == null || active.equalsIgnoreCase("true")) {
-                    validate(fieldToValidate.name, fieldToValidate.path, fieldToValidate.getData(true), fieldToValidate.assertion);
+                    String assertion = (fieldToValidate.assertion == null) ? AssertionType.EQUALS.name() : fieldToValidate.assertion;
+                    validate(fieldToValidate.name, fieldToValidate.path, fieldToValidate.getData(true), assertion);
                 }
         }
         soft.assertAll();
